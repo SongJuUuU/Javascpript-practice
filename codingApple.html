@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <p id="상태창">아이디</p>
+        <button onclick="아이디나오게하기()";>아이디 나오게 하기</button>
+        <button>비밀번호 나오게 하기</button>
+    </div>
+</body>
+<script>
+    function 아이디나오게하기() {
+        document.getElementById("상태창").style.display = "block";
+
+    }
+</script>
+<!-- 드디어 해냈다!!!!!!!!!!!!!!!! 그동안 왜 안되었을까?? 
+1. 신기한게, 자바스크립트에서는 "block"인데, css에서는 none이네?
+2. onclick에서도 함수를 쓰려고 하는데 ""를 붙여야하네?-->
+</html>
