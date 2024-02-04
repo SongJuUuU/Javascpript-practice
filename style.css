@@ -4,3 +4,20 @@ h1 {
 .active {
     color: tomato;
 }
+div{
+    display: flex;
+    height: 50px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    background-color: tan;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;  
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}

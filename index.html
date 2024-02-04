@@ -11,7 +11,21 @@
     <div class="hello">
         <h1 id="here">click here!</h1>
     </div>
+    <!--여기서 해주고 싶은게 뭐냐면 클릭히어를 가운데로 맞추고 싶어. 그러면 부모에게 무언가를 해야한다고 했는데. relative였나?-->
+    <!--그건 다른 것이랑 헷갈리고 있는 것 같아. 그냥 부모를 flex라고 해주면 되니깐 이렇게 하면 되나봐.
+    div 안의 글자를 flex하게 해주고 싶으면 div를, 즉 부모를 flex하게 해주면 되겠네.-->
+    <!--main축이 가로축이고 이것을 justify-content로 해결하는 것이다.-->
+    <!--그에 수직인 축을 만드는 것은 align-items이다. -->
+    <!--이걸 결정하는 방식이 무엇이냐면, 바로 flex-direction이다. 디폴트는 row이다.
+    또 하나 flex의 특징이 무엇이나면, 사이즈를 정해주면, 초기값정도로 생각한다. 이에 사이즈를 보장해주고 싶으면 
+    flex-wrap: wrap; 처리를 해주면 된다.
+    그리고 리버스도 신기합니다. direction에서 row-reverse 뿐만아니라, wrap-reverse도 사용할 수 있다.-->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <!-- flexible box에 대해서 복습해보자. 조건이 3개가 있었던 것 같은데?? 1. 자식이 아니라 부모에게 말해라-->
     <script src="script.js"></script>
+
 </body>
 </html>
 <!--우리는 이것을 ! 단축키로 실행하였습니다.-->
