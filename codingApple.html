@@ -8,23 +8,60 @@
         p{
             display: none;
         }
+        h1{
+            display: none;
+        }
     </style>
 
 </head>
 <body>
     <div>
-        <p id="상태창">아이디</p>
-        <button onclick="아이디나오게하기()";>아이디 나오게 하기</button>
-        <button>비밀번호 나오게 하기</button>
+        <p id="상태창"></p>
+        <button onclick="무언가나오게하기('아이디')">아이디 나오게 하기</button>
+        <button onclick="무언가나오게하기('비밀번호');">비밀번호 나오게 하기</button>
+    </div>
+    <div>
+        <h1 id="명언">명언</h1>
+        <button id="명언표시버튼">명언 보기</button>
+        <button id="명언숨기기버튼">명언 숨기기</button>
     </div>
 </body>
 <script>
-    function 아이디나오게하기() {
+    function 무언가나오게하기(원하는거) {
         document.getElementById("상태창").style.display = "block";
-
+        document.getElementById("상태창").innerText = 원하는거;
     }
+    // 그리고 이것도 중복이 되는데? 결국 해주고 싶으면 1. 눌러 2. 없어져 생겨 3. 무엇을? -> 아하 연결만해주명?
+
+    function 상태전환하기() {
+        if(document.getElementById("명언").style.display === "none") {
+            document.getElementById("명언").style.display = "block";
+    }   
+        else {
+            document.getElementById("명언").style.display = "none";
+        }
+    }
+
+    
+
+    document.getElementById("명언표시버튼").addEventListener("click", 상태전환하기);
+    document.getElementById("명언숨기기버튼").addEventListener("click", 상태전환하기);
+
 </script>
 <!-- 드디어 해냈다!!!!!!!!!!!!!!!! 그동안 왜 안되었을까?? 
 1. 신기한게, 자바스크립트에서는 "block"인데, css에서는 none이네?
-2. onclick에서도 함수를 쓰려고 하는데 ""를 붙여야하네?-->
+2. onclick에서도 함수를 쓰려고 하는데 ""를 붙여야하네?
+3. <button onclick="무언가나오게하기('아이디')";>아이디 나오게 하기</button> 여기 따옴표가 문제였어..
+4. 뭐야 3. 코드 에다가 ; 붙이든 안 붙이든 아무 상관없네..?
+5. 클래스 명으로 찾을 때는 인덱싱을 해야될 때도 있구나.
+6. =과 === 헷갈려 했구나!!
+7. 리스너에다가 함수를 설명할 수 있구나??
+8. 콜백함수? 뭔가를 순차적으로 실행할때?
+9. 니콜라스는 왜 처음에 그렇게 알려줬을까?
+10. querySelector는 맨위에 하나만 찾는구나. 그래서 맨 위가 아니면 All에서 인덱싱해야하네
+11. 에러나면 콘솔창에 입력해보기
+12. jQuery라는 라이브러리가 있네. 라이브러리도 결국엔 짜여진 코드이고 오브젝트를 다운로드하거나, 링크하는 것일뿐이겠네.
+13. 찐 개발자가 이런 라이브러리 만드는 사람이네. 아하, 그래서 귀찮음에 민감해야하고, 뭔갈 만들어볼까라는 생각을 해야겠구나.
+14. 대신 이런건 안돼. 자바스크립트로 불러와서 jQuery 적용 혹은 jQuery로 불러서 자바스크립트 함수 적용
+-->
 </html>
